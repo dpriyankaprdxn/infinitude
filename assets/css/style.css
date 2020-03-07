@@ -88,8 +88,12 @@ body {
 }
 
 a { 
+  cursor: pointer;
   display: inline-block;
   text-decoration: none; 
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
 }
 
 li {
@@ -107,9 +111,151 @@ li {
   Header styling starts here
 =================================*/
 
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
 
+header .wrapper { 
+  width: 88.5%; 
+  padding: 26px 0 24px;
+  border-bottom:  1px solid rgba(221, 221, 221);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #fff;
+}
 
+.menu { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-basis: 58.5%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
 
+nav { flex-basis: 78%; }
+
+nav a {
+  box-sizing: border-box;
+  padding: 2px;
+  margin-top: 3px;
+  color: #fff;
+  letter-spacing: 1px;
+  font: 600 13px sans-serif;
+  text-transform: uppercase;
+}
+
+nav li:not(:first-child) { padding-left: 8%; }
+
+.active { color: #feac00; }
+
+.socialMenus a {
+  text-indent: -9999px;
+}
+
+.socialMenus a:before {
+  float: right;
+  color: #fff;
+  font : 20px fontAwesome;
+  text-indent: 0;
+}
+
+.Facebook:before { content: "\f230"; }
+
+.twitter:before { content: "\f099"; }
+
+.Instagram:before { content: "\f16d"; }
+
+.dropDownContainer { position: relative; }
+
+.dropDownContainer > a:after { 
+  content: '\f107';
+  font : 14px fontAwesome;
+} 
+
+.dropDown {
+  width : 100%;
+  padding: 8px 42%;
+  display: none;
+  position: absolute;
+  left : 0;
+  background: #fff;
+}
+
+.dropDown li:not(:first-child) { padding-left: 0; }
+
+.dropDown a { color: #000; }
+
+.socialMenus { flex-basis: 15%; }
+
+.socialMenus li:not(:last-child) { padding-right: 14%; }
+
+.hamburger {
+  width: 20px;
+  display: block;
+  float : right;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+} 
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  display: none;
+  position: absolute;
+  background : #000;
+  text-indent: -9999px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) { top : 0; }
+
+.hamburger span:nth-child(2) { top : 6px; }
+
+.hamburger span:nth-child(3) { top : 12px; }
+
+.hamburger.open span:nth-child(1) {
+  top: 8px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {  opacity: 0; }
+
+.hamburger.open span:nth-child(3) {
+  top: 8px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.showhide { display: block; }
 
 
 /*=================================
@@ -120,12 +266,140 @@ li {
   main styling starts here
 =================================*/
 
+p {
+  font :  400 17.6px sans-serif;
+  line-height: 28.8px;
+  color: #555;
 
+}
 
+/*slick style start*/
 
+.banner .slick-dots {
+  width: 10%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 4%;
+  text-align: unset;
+}
 
+.banner .slick-dots li button:before { 
+  z-index: 1;
+  font-size: 12px; 
+}
 
+.banner .slick-dots li.slick-active button:before { color: #feac00; }
 
+/*slick style end*/
+
+/*banner styling start*/
+
+h2 {
+  color: #fff;
+  font : 700 59px sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.banner .wrapper { 
+  width: 100%; 
+  position: relative;
+}
+
+.bannerText {
+  position: absolute;
+  z-index: 2;
+  top : 50%;
+  left : 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.buttons { 
+  margin: 62px 0 136px;
+  text-align: center;
+}
+
+.buttons a {
+  padding : 11px 30px;
+  border : 2px solid transparent;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.buttons li:first-child { margin-right: 2%; }
+
+.buttons li:first-child a {
+  border: 2px solid #feac00;
+  border-radius: 5px;
+  background: #feac00;
+  color: #000;
+}
+
+.buttons li:last-child a {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+}
+
+.bannerSlider:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+}
+
+.buttons + ul {
+  color: #fff;
+  text-align: center;
+}
+
+.buttons + ul li:not(:last-child) { margin-right: 8%; }
+
+.counter {  
+  margin-right : 20px;
+  font : 700 30px sans-serif; 
+}
+
+.counterInfo {  font : 300 20px sans-serif;  }
+
+/*banner styling end*/
+/*designBuild styling start*/
+
+h3 {
+  font : 700 40px sans-serif;
+  text-transform: capitalize;
+}
+
+.designBuild h3 { margin-bottom: 36px; }
+
+h3 span { color: #feac00; }
+
+.designBuild p { margin-bottom: 33px; }
+
+.designBuild { margin: 107px 0 100px; }
+
+.YellowButton {
+  padding: 11px 30px;
+  border: 2px solid #feac00;
+  border-radius: 5px;
+  background: #feac00;
+  color: #222;  
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/*designBuild styling end*/
 
 /*=================================
   main styling ends here
@@ -146,6 +420,33 @@ li {
 =================================*/ 
 
 /*media query starts*/
+
+/*media query for remove hover below 1024px */
+@media only screen and (min-width: 1024px) {
+
+  nav a:hover,
+  .socialMenus a:hover::before { color: #feac00; }
+
+  .dropDownContainer:hover .dropDown { display: block; }
+
+  .banner .slick-dots li.slick-active button:hover::before { color: #fff; }
+
+  .buttons li:last-child a:hover {
+    border: 2px solid #feac00;
+    border-radius: 5px;
+    background: #feac00;
+    color: #000;
+  }
+
+  .YellowButton:hover {
+    border: 2px solid #222;
+    background: #222;
+    color: #feac00;  
+  }
+
+}
+
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
