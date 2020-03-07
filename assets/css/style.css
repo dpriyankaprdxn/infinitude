@@ -269,7 +269,8 @@ nav li:not(:first-child) { padding-left: 8%; }
 .servicesInfo,
 .servicesInfo + ul,
 .weProvideContainer,
-.serviceProvides {
+.serviceProvides ,
+.project ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,6 +278,9 @@ nav li:not(:first-child) { padding-left: 8%; }
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
+.serviceProvides,
+.project ul { flex-wrap: wrap; }
 
 p {
   font :  400 17.6px sans-serif;
@@ -286,6 +290,8 @@ p {
 }
 
 /*slick style start*/
+
+.bannerSlider li { display: block; }
 
 .banner .slick-dots {
   width: 10%;
@@ -508,8 +514,6 @@ h5 a { color: #222222; }
 
 .weProvideContainer li:last-child { flex-basis: 52%; }
 
-.serviceProvides { flex-wrap: wrap; }
-
 .serviceProvides li:first-child, 
 .serviceProvides li:last-child { 
   position: relative;
@@ -538,7 +542,22 @@ h5 a { color: #222222; }
 
 .serviceProvides li:nth-child(4):before { content: "\f0eb"; }
 
+.weProvideContainer img,
+.servicesInfo img { border-radius: 4px; }
+
 /*weProvide styling end*/
+/*project section start*/
+
+.project li { flex-basis : 31%; }
+
+.project figure {  
+  border: 6px solid #f0f0f1; 
+  border-radius: 4px;
+}
+
+.project ul { margin-top: 47px; }
+
+/*project styling end*/
 
 /*=================================
   main styling ends here
