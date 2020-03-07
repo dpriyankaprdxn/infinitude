@@ -266,6 +266,18 @@ nav li:not(:first-child) { padding-left: 8%; }
   main styling starts here
 =================================*/
 
+.servicesInfo,
+.servicesInfo + ul,
+.weProvideContainer,
+.serviceProvides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 p {
   font :  400 17.6px sans-serif;
   line-height: 28.8px;
@@ -400,6 +412,133 @@ h3 span { color: #feac00; }
 }
 
 /*designBuild styling end*/
+/*services styling start*/
+
+.services {
+  padding: 98px 0 117px;
+  background: #f7f7f7;
+}
+
+.servicesInfo { 
+  padding-bottom: 48px;
+  margin-bottom : 59px;
+  border-bottom: 1px solid #ddd;
+}
+
+.servicesInfo li { flex-basis:  49%; }
+
+h4 {
+  font : 600 24px sans-serif;
+  letter-spacing: 1px;
+  line-height: 25.6px;  
+  text-transform: capitalize;
+}
+
+h5 {
+  font :  600 19.2px sans-serif;
+}
+
+h4 span { text-transform: lowercase; }
+
+h4 a , 
+h5 a { color: #222222; }
+
+.services p {  
+  margin: 15px 0; 
+  font-size: 16px;
+}
+
+.services p:last-of-type { margin-top: 0; }
+
+.servicesInfo + ul  li {
+  flex-basis:  24%;
+  position: relative;
+}
+
+.servicesInfo + ul {
+  justify-content: space-around;
+}
+
+.servicesInfo + ul  li:before {
+  font : 32px fontAwesome;
+  float: left;
+  position: absolute;
+  left: -10%;
+  color: #ffc107;
+}
+
+.servicesInfo + ul h5 { margin-bottom : 10px; }
+
+.servicesInfo + ul  h5, 
+.servicesInfo + ul p { margin-left: 10%; }
+
+.servicesInfo + ul  li:nth-child(1):before {  content: "\f0ac"; } 
+
+.servicesInfo + ul  li:nth-child(2):before {  content: "\f109"; } 
+
+.servicesInfo + ul  li:nth-child(3):before {  content: "\f2b5"; } 
+
+/*services styling end*/
+/*weProvide STYLING start*/
+
+.weProvide  {  
+  padding : 130px 0 121px;
+  background: url('https://via.placeholder.com/1284x689.png/312113');
+  background-size: cover;
+  background-repeat:  no-repeat; 
+  background-position: center; 
+  color: #fff;
+}
+
+.weProvideContainer h4 { 
+  margin-bottom : 11.2px;
+  font-size: 19.2px; 
+}
+
+.weProvideContainer li:first-child p { margin: 20px 0; }
+
+.weProvide p,
+.weProvide a { color: #fff; }
+
+.weProvide p {
+  font-size: 16px;
+}
+
+.weProvideContainer li:first-child { flex-basis: 38%; }
+
+.weProvideContainer li:last-child { flex-basis: 52%; }
+
+.serviceProvides { flex-wrap: wrap; }
+
+.serviceProvides li:first-child, 
+.serviceProvides li:last-child { 
+  position: relative;
+  flex-basis: 41%; 
+}
+
+.serviceProvides li { 
+  margin-bottom: 80px; 
+  position: relative; 
+  flex-basis: 41%; 
+}
+
+.serviceProvides li:before { 
+  float: left;
+  font : 32px fontAwesome;
+  position: absolute;
+  top: 4%;
+  left: -20%;
+}
+
+.serviceProvides li:nth-child(1):before { content: "\f1fc"; }
+
+.serviceProvides li:nth-child(2):before { content: "\f0a1"; }
+
+.serviceProvides li:nth-child(3):before { content: "\f132"; }
+
+.serviceProvides li:nth-child(4):before { content: "\f0eb"; }
+
+/*weProvide styling end*/
 
 /*=================================
   main styling ends here
@@ -425,7 +564,9 @@ h3 span { color: #feac00; }
 @media only screen and (min-width: 1024px) {
 
   nav a:hover,
-  .socialMenus a:hover::before { color: #feac00; }
+  .socialMenus a:hover::before,
+  h4 a:hover,
+  h5 a:hover { color: #feac00; }
 
   .dropDownContainer:hover .dropDown { display: block; }
 
