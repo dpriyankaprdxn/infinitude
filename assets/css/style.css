@@ -618,6 +618,7 @@ h5 a { color: #222222; }
 .modal { display : none; }
  
 /*project styling end*/
+/*recentBlog styling start*/
 
 .recentBlog .wrapper { width : 100%; }
 
@@ -650,6 +651,9 @@ h5 a { color: #222222; }
 .aboutBlog p {  font-size : 14.4px; }
 
 .aboutBlog h5 { margin : 4.8px 0; }
+
+/*recentBlog styling end*/
+/*appointment styling start*/
 
 .appointment {  background : #f7f7f7; }
 
@@ -699,6 +703,9 @@ h5 a { color: #222222; }
   display : block;
 }
 
+/*appointment styling end*/
+/*testimonial styling start*/
+
 .testimonials {
   padding : 106px 0 122px;
   position : relative;
@@ -723,7 +730,7 @@ h5 a { color: #222222; }
 
 .testimonialSlider li { 
   box-sizing : border-box;
-  padding : 15px 5%;
+  padding: 56px 0.5% 55px;
   margin-bottom : 2px;
   flex-basis : 31%;
   background : #fff;
@@ -771,6 +778,24 @@ h5 a { color: #222222; }
   font-size : 13px;
   line-height : 8px;
 }
+
+.testimonialSlider .slick-dots li { 
+  padding:  0;  
+  border-radius: 50%;
+}
+
+.testimonialSlider .slick-slide {
+    margin-left:  15px;
+    margin-right:  15px;
+  }
+
+.testimonialSlider  .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
+  pointer-events: none;
+}
+
+/*testimonial styling end*/
 /*=================================
   main styling ends here
 =================================*/
