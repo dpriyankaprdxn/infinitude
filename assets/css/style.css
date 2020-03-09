@@ -276,7 +276,8 @@ nav li:not(:first-child) { padding-left: 8%; }
 .appointment .wrapper,
 .testimonialSlider,
 .aboutTestimonia,
-.InfinitudeFooter {
+.InfinitudeFooter,
+.footerBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,7 +291,8 @@ nav li:not(:first-child) { padding-left: 8%; }
 .project ul,
 .appointment .wrapper,
 .testimonialSlider,
-.InfinitudeFooter {
+.InfinitudeFooter,
+.footerBottom {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -619,8 +621,55 @@ h5 a { color: #222222; }
   font-size : 16px; 
 }
 
-.modal { display : none; }
+.modal { 
+  display : none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modalContainer {
+  width: 30%;
+  padding : 48px 1%;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%,-50%);
+}
+
+.close {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: #000;
+  font: bold 30px sans-serif;
+  transition: 0.3s;
+  cursor : pointer;
+}
  
+.modal figure { 
+  border: none;
+  display: block;
+}
+
+.modal h5 { 
+  box-sizing: border-box;
+  margin: 15px 0;
+}
+
+.modal p {
+  color: #666;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+}
+
 /*project styling end*/
 /*recentBlog styling start*/
 
@@ -982,9 +1031,19 @@ footer address {  line-height: 28.5px; }
 .contactInfo li:nth-child(4):before {   content: "\f0e0"; }
 
 .footerBottom {
-  width: 100%;
   padding: 32px 7% 0;
-  border-top :  1px solid #ddd;
+  border-top :  1px solid rgba(221, 221, 221, 0.12);
+}
+
+.footerBottom a { color: #fff; }
+
+.top { text-indent: -9999px; }
+
+.top:before {
+  content: "\f102";
+  float: right;
+  font : 15px fontAwesome;
+  text-indent: 0;
 }
 
  /*=================================
@@ -1025,10 +1084,7 @@ footer address {  line-height: 28.5px; }
     color : #fff;
   }
 
-  .quickLinksOne a:hover ,
-  .quickLinksTwo a:hover,
-  .contactInfo a:hover { color : #555; }
-
+  footer a:hover { color : #555; }
 }
 
 
