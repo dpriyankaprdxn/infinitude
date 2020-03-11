@@ -255,8 +255,6 @@ nav li:not(:first-child) { padding-left: 8%; }
   transform: rotate(-135deg);
 }
 
-.showhide { display: block; }
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -347,6 +345,10 @@ h2 {
   width: 100%; 
   position: relative;
 }
+
+.banner .slick-slide img:first-of-type { display : block; }
+
+.banner .slick-slide img:last-of-type { display : none; }
 
 .bannerText {
   position: absolute;
@@ -758,6 +760,7 @@ h5 a { color: #222222; }
   padding : 8px 2%;
   display : block;
   color: #FF0000;
+  font-size : 13px;
 }
 
 /*appointment styling end*/
@@ -838,7 +841,7 @@ h5 a { color: #222222; }
 
 .testimonialSlider .slick-dots li { 
   padding:  0;  
-  border-radius: 50%;
+  background : transparent; 
 }
 
 .testimonialSlider .slick-slide {
@@ -850,6 +853,13 @@ h5 a { color: #222222; }
   margin-left: -15px;
   margin-right: -15px;
   pointer-events: none;
+}
+
+.testimonialSlider .slick-dots { bottom : -50px; }
+
+.testimonialSlider .slick-dots li button::before { 
+  color : white; 
+  font-size : 12px;
 }
 
 /*testimonial styling end*/
@@ -908,6 +918,9 @@ h5 a { color: #222222; }
 }
 
 /*newsletter styling end*/
+
+.showhide { display: block; }
+
 /*=================================
   main styling ends here
 =================================*/
@@ -1014,7 +1027,7 @@ footer p {
   margin-top: -9px;
 }
 
-.contactInfo li:before {
+.contactInfo a:before {
   margin-right: 10px;
   float: left;
   font : 15px fontAwesome;
@@ -1022,16 +1035,16 @@ footer p {
 
 footer address {  line-height: 28.5px; }
 
-.contactInfo li:nth-child(1):before {   
+.contactInfo li:nth-child(1) a:before {   
   content: "\f041";
   margin-top: 6px;
 }
 
-.contactInfo li:nth-child(2):before {   content: "\f095"; }
+.contactInfo li:nth-child(2) a:before {   content: "\f095"; }
 
-.contactInfo li:nth-child(3):before {   content: "\f1ac"; }
+.contactInfo li:nth-child(3) a:before {   content: "\f1ac"; }
 
-.contactInfo li:nth-child(4):before {   content: "\f0e0"; }
+.contactInfo li:nth-child(4) a:before {   content: "\f0e0"; }
 
 .footerBottom {
   padding: 32px 7% 0;
@@ -1064,7 +1077,8 @@ footer address {  line-height: 28.5px; }
   .socialMenus a:hover::before,
   h4 a:hover,
   h5 a:hover,
-  .footerSocial a:hover::before  { color: #feac00; }
+  .footerSocial a:hover::before,
+  footer a:hover  { color: #feac00; }
 
   .banner .slick-dots li.slick-active button:hover::before { color: #fff; }
 
@@ -1073,6 +1087,12 @@ footer address {  line-height: 28.5px; }
     border-radius: 5px;
     background: #feac00;
     color: #000;
+  }
+  
+  .buttons li:first-child a:hover {
+    border : 1px solid #fff;
+    background : transparent;
+    color : #fff;   
   }
 
   .YellowButton:hover,
@@ -1086,8 +1106,6 @@ footer address {  line-height: 28.5px; }
     background : #000;
     color : #fff;
   }
-
-  footer a:hover { color : #555; }
 }
 
 /*media query for 1236x starts here*/
@@ -1312,5 +1330,11 @@ footer address {  line-height: 28.5px; }
     padding : 20px 4%;
     margin-top: 20px;
   }
+  
+  .banner .slick-slide img:first-of-type { display : none; }
+  
+  .banner .slick-slide img:last-of-type { display : block; }
+  
+  .banner .slick-dots {  width : 35%; }
 
 }  
