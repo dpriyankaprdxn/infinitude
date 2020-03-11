@@ -492,20 +492,21 @@
               <div class="form-group" >
                 <label>First name</label>
                 <input type="text" name="fname" class="fname" >
-                <span class="fnameError" ></span>
+                <span class="error fnameError" ></span>
               </div>
               <div class="form-group" >
                 <label>Last name</label>
                 <input type="text" name="lname" class="lname" >
-                <span class="lnameError" ></span>
+                <span class="error lnameError" ></span>
               </div>
               <div class="form-group" >
                 <label>Password</label>
                 <input type="password" name="password" class="password" >
-                <span class="passwordError" ></span>
+                <span class="error passwordError" ></span>
               </div>
               <div class="form-control" >
-                <input type="submit" name="submit" value="Appointment" class="appointmenFormButton YellowButton"  >
+                <input type="submit" name="submit" value="Appointment" class="appointmenFormButton YellowButton" >
+                <span class="successMsg" ></span>
               </div>
             </form>
           </div>
@@ -670,11 +671,12 @@
           <div class="newsletterFormContainer" >
             <form class="newsletterForm" action="#FIXME" method="post" >
               <div class="form-group">
-                <input type="text" name="email" placeholder="Your Email Here..." >
-                <span class="emailError" ></span>
+                <input type="text" name="email" class="email" placeholder="Your Email Here..." >
+                <span class="error emailError" ></span>
               </div>
               <div class="form-control" >
                 <input type="submit" name="subscribe" value="Subscribe" class="subscribe" >
+                <span class="successMsg" ></span>
               </div>
             </form>
           </div>
