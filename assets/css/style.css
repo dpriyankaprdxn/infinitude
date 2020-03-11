@@ -921,6 +921,8 @@ h5 a { color: #222222; }
 
 .showhide { display: block; }
 
+.overflow { overflow : hidden; }
+
 /*=================================
   main styling ends here
 =================================*/
@@ -1078,7 +1080,8 @@ footer address {  line-height: 28.5px; }
   h4 a:hover,
   h5 a:hover,
   .footerSocial a:hover::before,
-  footer a:hover  { color: #feac00; }
+  footer a:hover,
+  .close:hover  { color: #feac00; }
 
   .banner .slick-dots li.slick-active button:hover::before { color: #fff; }
 
