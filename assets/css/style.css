@@ -443,10 +443,9 @@ h3 span { color: #feac00; }
   font-size: 16px;
   text-transform: capitalize;
 }
-
 /*designBuild styling end*/
-/*services styling start*/
 
+/*services styling start*/
 .services {
   padding: 98px 0 117px;
   background: #f7f7f7;
@@ -874,7 +873,7 @@ h5 a { color: #222222; }
 
 .newsletter p {
   width: 25%;
-  display: inline-block;
+  float: left;
   color: #555;
   font: 700  17.6px sans-serif;  
 }
@@ -915,6 +914,7 @@ h5 a { color: #222222; }
   padding: 8px 1% 0;
   display: block;
   color: #FF0000;
+  font-size: 12px;
 }
 
 /*newsletter styling end*/
@@ -922,6 +922,8 @@ h5 a { color: #222222; }
 .showhide { display: block; }
 
 .overflow { overflow : hidden; }
+
+.form-control span { color: #155724;  }
 
 /*=================================
   main styling ends here
